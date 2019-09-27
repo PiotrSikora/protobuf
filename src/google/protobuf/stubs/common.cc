@@ -44,6 +44,7 @@
 #define snprintf _snprintf    // see comment in strutil.cc
 #elif defined(HAVE_PTHREAD)
 #include <pthread.h>
+#elif defined(__EMSCRIPTEN__) // Emscripten doesn't have any threading support yet
 #else
 #error "No suitable threading library available."
 #endif
